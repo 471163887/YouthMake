@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	<!--  13 行 |withText-->
+   
+    <item
+        android:id="@+id/operation"
+        android:showAsAction="always"
+        android:icon="@drawable/operation_image"
+        android:title="hi">
+        <menu>
+                <item
+                    android:id="@+id/wu"
+                    android:title="">
+                </item>
+                <item
+                    android:id="@+id/ToLogin"
+                    android:icon="@drawable/addstudent_image"
+                    android:title="登陆">
+                </item>
+                <item
+                    android:id="@+id/eixt"
+                    android:icon="@drawable/deletestudent_image"
+                    android:title="退出">
+                </item>
+        </menu>
+    </item>
+</menu>
