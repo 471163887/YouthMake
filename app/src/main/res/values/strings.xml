@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Youth Make</string>
+    <string name="app_name">青春制噪</string>
 
     <string name="title_section1">阳光地带</string>
     <string name="title_section2">个人中心</string>
@@ -21,7 +21,7 @@
     <string name="hello_world">Hello world!</string>
     <!-- 2015.5.31 -->
     <string name="title_activity_login">LoginActivity</string>
-    <string name="befor_login">如果您还未申请账号,请先注册账号再登陆.</string>
+    <string name="befor_login">还木有账号？</string>
 
     <string-array name="student">
         <item>邓名侨</item>
@@ -29,4 +29,10 @@
         <item>其黄石</item>
         <item>蔡宏远</item>
     </string-array>
+    <!-- 2015.6.1 -->
+    <string name="title_activity_register">注册账号</string>
+    <string name="inputAccount">请输入账号</string>
+    <string name="login_account_null">账号不能为空哦！</string>
+    <string name="login_password_null">密码不能为空哦！</string>
+    <string name="warning">"  温馨提示"</string>
 </resources>

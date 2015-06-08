@@ -1,12 +1,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <!--  2015.6.1
     <item
         android:id="@+id/action_example"
         android:title="@string/action_example"
         android:orderInCategory="80"
         android:icon="@drawable/ab_edit"
-        app:showAsAction="withText|ifRoom" />
+        app:showAsAction="withText|ifRoom" />-->
     <item
         android:id="@+id/action_settings"
         android:title="@string/action_settings"

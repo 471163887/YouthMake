@@ -14,6 +14,8 @@
     <color name="blue">#ff3993cf</color>
     <color name="blue_renren">#ff4caaf4</color>
     <color name="blue_renren_pressed">#ff469ce0</color>
+    <color name="green_tan">#ffadb078</color>
+    <color name="yellow_tan">#ffb0af31</color>
     <color name="green">#ff5ab06c</color>
     <color name="green_weixin">#ff42bd41</color>
     <color name="green_weixin_pressed">#ff3cae3b</color>

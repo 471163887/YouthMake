@@ -57,13 +57,13 @@
             tools:layout="@layout/fragment_navigation_drawer" />
 
     </android.support.v4.widget.DrawerLayout>
-
+     <!-- android:background="@drawable/tab_bg"-->
     <LinearLayout
         android:id="@+id/BottonTab"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/tab_bg" >
+        android:background="@color/white" >
 
         <RelativeLayout
             android:id="@+id/message_layout"

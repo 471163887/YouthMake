@@ -8,9 +8,9 @@ import android.os.Handler;
 import com.example.fury.youthmake.R;
 /**
  *
- * @{#} SplashActivity.java Create on 2015-5-30 ÏÂÎç10:10:01
+ * @{#} SplashActivity.java Create on 2015-5-30 æ™š10:10:01
  *
- * class desc:   Æô¶¯»­Ãæ
+ * class desc:  å¯åŠ¨ç”»é¢
  *
  * @Version 1.0
  * @Author fury
@@ -18,15 +18,15 @@ import com.example.fury.youthmake.R;
 
 public class SplashActivity extends Activity {
 
-    //ÑÓ³Ù5Ãë
-    private static final long SPLASH_DELAY_MILLIS = 3000;
+    //å»¶è¿Ÿ3ç§’
+    private static final long SPLASH_DELAY_MILLIS = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        // Ê¹ÓÃHandlerµÄpostDelayed·½·¨£¬3ÃëºóÖ´ĞĞÌø×ªµ½MainActivity
+        //ä½¿ç”¨Handlerçš„postDelayedæ–¹æ³•ï¼Œ3ç§’åæ‰§è¡Œè·³è½¬åˆ°MainActivity
         new Handler().postDelayed(new Runnable() {
             public void run() {
                 goHome();

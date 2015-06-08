@@ -10,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -76,6 +77,10 @@ public class MainActivity extends ActionBarActivity
      */
     private FragmentManager fragmentManager;
     private FragmentTransaction transaction;
+    /**
+     * 退出时间间隔为 0 ~ 2000
+     */
+    private long exitTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -160,10 +165,11 @@ public class MainActivity extends ActionBarActivity
 
         switch (id) {
             // action with ID action_refresh was selected
+            /*
             case R.id.action_example:
 
                 Toast.makeText(this, "Refresh selected", Toast.LENGTH_SHORT).show();
-                break;
+                break;*/
             // action with ID action_settings was selected
             case R.id.action_settings:
                 /*
@@ -285,7 +291,7 @@ public class MainActivity extends ActionBarActivity
             case 0:
                 // 当点击了消息tab时，改变控件的图片和文字颜色
                 messageImage.setImageResource(R.drawable.message_selected);
-                messageText.setTextColor(Color.WHITE);
+                messageText.setTextColor(Color.RED);
                 if (messageFragment == null) {
                     // 如果MessageFragment为空，则创建一个并添加到界面上
                     messageFragment = new Message();
@@ -303,7 +309,7 @@ public class MainActivity extends ActionBarActivity
 
                 //  当点击了设置tab时，改变控件的图片和文字颜色
                 settingImage.setImageResource(R.drawable.setting_selected);
-                settingText.setTextColor(Color.WHITE);
+                settingText.setTextColor(Color.BLUE);
                 if (settingFragment == null) {
                     // 如果SettingFragment为空，则创建一个并添加到界面上
                     settingFragment = new Setting();
@@ -362,6 +368,20 @@ public class MainActivity extends ActionBarActivity
             startActivity(intent);
             return true;
         }
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){
+            if((System.currentTimeMillis()-exitTime) > 2000){
+                Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            } else {
+                finish();
+                System.exit(0);
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
 }

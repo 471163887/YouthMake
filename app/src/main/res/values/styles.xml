@@ -13,6 +13,19 @@
         <item name="colorAccent">@color/my_awesome_purple</item>
 
     </style>
+    <!-- 15.6.1  transparent自定义自己的Style文件，这样Activity的显示才会按照自己的要求实现 @android:style/Theme.Dialog-->
+    <style name="MyDialogStyle" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+       <!--  背景进入阴影 -->
+         <item name="android:backgroundDimEnabled">true</item>
+    </style>
 
 
 </resources>

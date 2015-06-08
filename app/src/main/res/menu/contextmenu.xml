@@ -5,7 +5,7 @@
     <item
         android:id="@+id/operation"
         android:showAsAction="always"
-        android:icon="@drawable/operation_image"
+        android:icon="@drawable/ab_edit"
         android:title="hi">
         <menu>
                 <item
