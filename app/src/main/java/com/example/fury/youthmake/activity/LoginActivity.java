@@ -181,6 +181,29 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
                             }).show();
                     return ;
                 }
+                if(user_name.length() < 6){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                    builder.setIcon(R.drawable.simle)
+                            .setTitle(getString(R.string.warning))
+                            .setMessage("您输入的用户名少于6位！")
+                            .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                                // 点击确定按钮
+                                public void onClick(DialogInterface dialog, int which) {}
+                            }).show();
+                    return ;
+                }
+                if(user_pwd.length() < 6){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                    builder.setIcon(R.drawable.simle)
+                            .setTitle(getString(R.string.warning))
+                            .setMessage("您输入的密码少于6位！")
+                            .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                                // 点击确定按钮
+                                public void onClick(DialogInterface dialog, int which) {
+                                }
+                            }).show();
+                    return ;
+                }
                 // 显示登陆对话框
                 prgDialog = new ProgressDialog(LoginActivity.this);
                 prgDialog.setIcon(R.drawable.progress);

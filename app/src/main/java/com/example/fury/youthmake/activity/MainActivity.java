@@ -26,6 +26,7 @@ import com.example.fury.youthmake.R;
 import com.example.fury.youthmake.fragment.Message;
 import com.example.fury.youthmake.fragment.NavigationDrawerFragment;
 import com.example.fury.youthmake.fragment.Setting;
+import com.example.fury.youthmake.fragment.Weekly;
 
 
 public class MainActivity extends ActionBarActivity
@@ -41,37 +42,29 @@ public class MainActivity extends ActionBarActivity
      */
     private CharSequence mTitle;
     /**
-     * 用于展示消息的Fragment
+     * 1.用于展示的Fragment
+     * 2.界面布局
+     * 3.在Tab布局上显示图标控件
+     * 4.在Tab布局上显示文字控件
      */
     private Message messageFragment;
-    /**
-     * 消息界面布局
-     */
     private View messageLayout;
-    /**
-     * 在Tab布局上显示消息图标的控件
-     */
     private ImageView messageImage;
-    /**
-     * 在Tab布局上显示消息标题的控件
-     */
     private TextView messageText;
     /**
-     * 设置界面布局
-     */
-    private View settingLayout;
-    /**
-     * 用于展示设置的Fragment
+     * settingLayout
      */
     private Setting settingFragment;
-    /**
-     * 在Tab布局上显示设置图标的控件
-     */
+    private View settingLayout;
     private ImageView settingImage;
-    /**
-     * 在Tab布局上显示设置标题的控件
-     */
     private TextView settingText;
+    /**
+     *  weeklyLayout
+     */
+    private Weekly weeklyFragment;
+    private View weeklyLayout;
+    private ImageView weeklyImage;
+    private TextView weeklyText;
     /**
      *  用于对Fragment进行管理
      */
@@ -107,7 +100,7 @@ public class MainActivity extends ActionBarActivity
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
-        //FragmentManager fragmentManager = getSupportFragmentManager();
+
         fragmentManager = getSupportFragmentManager();
         // 开启一个Fragment事务
 
@@ -258,13 +251,22 @@ public class MainActivity extends ActionBarActivity
         settingImage = (ImageView) findViewById(R.id.setting_image);
         settingText = (TextView) findViewById(R.id.setting_text);
         settingLayout.setOnClickListener(this);
+
+        weeklyLayout = findViewById(R.id.news_layout);
+        weeklyImage = (ImageView) findViewById(R.id.news_image);
+        weeklyText = (TextView) findViewById(R.id.news_text);
+        weeklyLayout.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.message_layout:
-                // // 当点击了消息tab时，选中第1个tab
+                // 当点击了消息tab时，选中第1个tab
                 setTabSelection(0);
+                break;
+            case R.id.news_layout:
+                // 当点击了动态tab时，选中第3个tab
+                setTabSelection(2);
                 break;
             case R.id.setting_layout:
                 // 当点击了设置tab时，选中第4个tab
@@ -278,7 +280,7 @@ public class MainActivity extends ActionBarActivity
      * 根据传入的index参数来设置选中的tab页。
      *
      * @param index
-     *            每个tab页对应的下标。0表示消息，1表示联系人，2表示动态，3表示设置。
+     * 每个tab页对应的下标。0表示消息，1表示联系人，2表示动态，3表示设置。
      */
     private void setTabSelection(int index) {
         // 每次选中之前先清楚掉上次的选中状态
@@ -303,7 +305,17 @@ public class MainActivity extends ActionBarActivity
                     transaction.show(messageFragment);
                 }
                 break;
-
+            case 2:
+                //  当点击了设置tab时，改变控件的图片和文字颜色
+                weeklyImage.setImageResource(R.drawable.news_selected);
+                weeklyText.setTextColor(Color.BLUE);
+                if (weeklyFragment == null) {
+                    weeklyFragment = new Weekly();
+                    transaction.add(R.id.container, weeklyFragment);
+                } else {
+                    transaction.show(weeklyFragment);
+                }
+                break;
             case 3:
             default:
 
@@ -332,6 +344,8 @@ public class MainActivity extends ActionBarActivity
         messageText.setTextColor(Color.parseColor("#82858b"));
         settingImage.setImageResource(R.drawable.setting_unselected);
         settingText.setTextColor(Color.parseColor("#82858b"));
+        weeklyImage.setImageResource(R.drawable.news_unselected);
+        weeklyText.setTextColor(Color.parseColor("#82858b"));
     }
     /**
      * 将所有的Fragment都置为隐藏状态。
@@ -346,6 +360,9 @@ public class MainActivity extends ActionBarActivity
         }
         if (settingFragment != null) {
             transaction.hide(settingFragment);
+        }
+        if (weeklyFragment != null) {
+            transaction.hide(weeklyFragment);
         }
         if (PlaceholderFragment.getFragment() != null) {
             transaction.hide(PlaceholderFragment.getFragment());
@@ -382,6 +399,12 @@ public class MainActivity extends ActionBarActivity
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        //重写并注释掉希望可以防止Fragment重叠的问题！
+        //super.onSaveInstanceState(outState);
     }
 
 }
