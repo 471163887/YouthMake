@@ -24,7 +24,12 @@ import com.example.fury.youthmake.R;
 import com.example.fury.youthmake.util.HttpUtil;
 import com.example.fury.youthmake.util.StringUtil;
 import com.example.fury.youthmake.util.UrlUtil;
-
+/**
+ * Copyright (C) 年少才华
+ * Date: 2015-6-01  19:28
+ * Mail: 18844195756@163.com
+ * Auth: flt
+ */
 public class LoginActivity extends ActionBarActivity implements View.OnClickListener {
 
     private BootstrapEditText m_username;

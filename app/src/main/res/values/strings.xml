@@ -35,4 +35,20 @@
     <string name="login_account_null">账号不能为空哦！</string>
     <string name="login_password_null">密码不能为空哦！</string>
     <string name="warning">"  温馨提示"</string>
+    <string name="title_activity_one_day">OneDayActivity</string>
+
+    <string-array name="jazzy_effects">
+        <item>Standard</item>
+        <item>Tablet</item>
+        <item>CubeIn</item>
+        <item>CubeOut</item>
+        <item>FlipVertical</item>
+        <item>FlipHorizontal</item>
+        <item>Stack</item>
+        <item>ZoomIn</item>
+        <item>ZoomOut</item>
+        <item>RotateUp</item>
+        <item>RotateDown</item>
+        <item>Accordion</item>
+    </string-array>
 </resources>

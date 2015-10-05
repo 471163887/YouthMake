@@ -43,4 +43,6 @@
     <color name="my_awesome_purple">#ffd86dd3</color>
 
     <color name="menu_section_header">#FFDDDDDD</color>
+
+    <color name="holo_blue">#FF33E5B5</color>
 </resources>

@@ -22,7 +22,12 @@ import com.example.fury.youthmake.R;
 import com.example.fury.youthmake.util.HttpUtil;
 import com.example.fury.youthmake.util.StringUtil;
 import com.example.fury.youthmake.util.UrlUtil;
-
+/**
+ * Copyright (C) 年少才华
+ * Date: 2015-6-02  20:32
+ * Mail: 18844195756@163.com
+ * Auth: flt
+ */
 public class RegisterActivity extends ActionBarActivity {
 
     private EditText username;

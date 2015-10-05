@@ -7,13 +7,10 @@ import android.os.Handler;
 
 import com.example.fury.youthmake.R;
 /**
- *
- * @{#} SplashActivity.java Create on 2015-5-30 晚10:10:01
- *
- * class desc:  启动画面
- *
- * @Version 1.0
- * @Author fury
+ * Copyright (C) 年少才华
+ * Date: 2015-6-01  10:15
+ * Mail: 18844195756@163.com
+ * Auth: flt
  */
 
 public class SplashActivity extends Activity {
