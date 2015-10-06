@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import com.beardedhen.androidbootstrap.BootstrapButton;
 import com.example.fury.youthmake.R;
 import com.example.fury.youthmake.activity.OneDayActivity;
+import com.example.fury.youthmake.activity.WeekSetActivity;
 
 /**
  * Copyright (C) 才华制噪
@@ -29,13 +30,22 @@ public class Weekly extends Fragment {
                              Bundle savedInstanceState) {
         View weeklyView = inflater.inflate(R.layout.fragment_weekly, container, false);
 
-        BootstrapButton ToWeekly = (BootstrapButton)weeklyView.findViewById(R.id.ToWeekly);
+        BootstrapButton toWeekly = (BootstrapButton)weeklyView.findViewById(R.id.ToWeekly);
+        BootstrapButton toWeeklySet = (BootstrapButton)weeklyView.findViewById(R.id.ToWeeklySet);
 
-        ToWeekly.setOnClickListener(new View.OnClickListener(){
+        toWeekly.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), OneDayActivity.class);
+                startActivity(intent);
+            }
+        });
+        toWeeklySet.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), WeekSetActivity.class);
                 startActivity(intent);
             }
         });

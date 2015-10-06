@@ -2,31 +2,44 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
+
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:orientation="vertical" >
+        android:orientation="vertical">
+        <!--
+        -->
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center"
             android:padding="10dp"
-            android:text="开启我的一周"
+            android:text="开始时间"
             android:textSize="20sp" />
 
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/ToWeeklySet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Setting my week !"
+            bootstrap:bb_type="Warning"
+            />
         <!-- basic button bootstrap:bb_icon_right="fa-android"-->
         <com.beardedhen.androidbootstrap.BootstrapButton
             android:id="@+id/ToWeekly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Go !"
+            android:text="Start My Day !"
             bootstrap:bb_type="Warning"
             />
+
     </LinearLayout>
 
 </RelativeLayout>

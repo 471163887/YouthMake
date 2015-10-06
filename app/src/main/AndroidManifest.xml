@@ -44,6 +44,8 @@
             android:label="@string/title_activity_one_day"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity android:name=".activity.WeekSetActivity" >
+        </activity>
     </application>
 
 </manifest>
