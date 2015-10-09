@@ -11,6 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.beardedhen.androidbootstrap.BootstrapButton;
 import com.example.fury.youthmake.R;
 import com.example.fury.youthmake.widget.DatePicker;
 import com.example.fury.youthmake.widget.TimePicker;
@@ -24,6 +25,7 @@ public class WeekSetActivity extends Activity {
     private TimePicker tp_test;
     private TextView tv_ok,tv_cancel;	//确定、取消button
     private Button btn_naozhong;
+    private BootstrapButton taskNumOk;
     private PopupWindow pw;
     private String selectDate,selectTime;
     //选择时间与当前时间，用于判断用户选择的是否是以前的时间
@@ -37,9 +39,9 @@ public class WeekSetActivity extends Activity {
         setContentView(R.layout.activity_week_set);
 
         Rl_all = (RelativeLayout) findViewById(R.id.Rl_all);
-        btn_naozhong = (Button) findViewById(R.id.btn_naozhong);
+        //btn_naozhong = (Button) findViewById(R.id.btn_naozhong);
         calendar = Calendar.getInstance();
-
+        /*
         btn_naozhong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
@@ -97,7 +99,7 @@ public class WeekSetActivity extends Activity {
                     }
                 });
             }
-        });
+        });*/
     }
 
     //listeners

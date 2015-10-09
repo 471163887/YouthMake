@@ -10,8 +10,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:orientation="vertical">
-        <!--
-        -->
 
 
         <TextView
@@ -27,18 +25,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Setting my week !"
-            bootstrap:bb_type="Warning"
-            />
+            android:text="Setting my week !" />
         <!-- basic button bootstrap:bb_icon_right="fa-android"-->
         <com.beardedhen.androidbootstrap.BootstrapButton
             android:id="@+id/ToWeekly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Start My Day !"
-            bootstrap:bb_type="Warning"
-            />
+            android:text="Start My Day !" />
+        <!--  bootstrap:bb_type="warning" -->
 
     </LinearLayout>
 

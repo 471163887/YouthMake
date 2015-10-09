@@ -26,15 +26,14 @@
             android:textSize="20sp" />
 
         <!-- basic button -->
+        <!-- bootstrap:bb_type="success" 本来能用的 更新之后应该是用其他方法表示-->
+        <!--bootstrap:bb_icon_right="fa-android" -->
         <com.beardedhen.androidbootstrap.BootstrapButton
             android:id="@+id/ToLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Success"
-            bootstrap:bb_icon_right="fa-android"
-            bootstrap:bb_type="success"
-            />
+            android:text="Success" />
     </LinearLayout>
 
 </RelativeLayout>

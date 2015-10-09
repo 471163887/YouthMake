@@ -52,13 +52,13 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/guide_account_nm"/>
+            <!--bootstrapbutton:be_roundedCorners="true" -->
             <com.beardedhen.androidbootstrap.BootstrapEditText
                 android:id="@+id/text_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="请输入账号"
-                bootstrapbutton:be_roundedCorners="true"
                 android:gravity="center"/>
         </TableRow>
         <TableRow
@@ -71,14 +71,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/guide_discover_nm"/>
+            <!-- bootstrapbutton:be_roundedCorners="true"
+                bootstrapbutton:be_state="danger"
+                -->
             <com.beardedhen.androidbootstrap.BootstrapEditText
                 android:id="@+id/text_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:hint="请输入密码"
-                bootstrapbutton:be_roundedCorners="true"
-                bootstrapbutton:be_state="danger"
                 android:gravity="center"/>
         </TableRow>
 
@@ -133,15 +134,14 @@
             android:gravity="center"
             android:paddingLeft="15dp"
             android:paddingRight="15dp" >
-
+            <!-- bootstrap:bb_type="success"
+                bootstrapbutton:bb_roundedCorners="true"-->
             <com.beardedhen.androidbootstrap.BootstrapButton
                 android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="登陆"
-                bootstrap:bb_type="success"
-                bootstrapbutton:bb_roundedCorners="true"
                 android:layout_gravity="center"
                 />
         </TableRow>
@@ -158,13 +158,12 @@
             android:textSize="20sp"
             android:textColor="@color/yellow_tan"
             android:text="@string/befor_login" />
+        <!--bootstrap:bb_type="warning"
+            bootstrapbutton:bb_roundedCorners="true" -->
         <com.beardedhen.androidbootstrap.BootstrapButton
             android:id="@+id/register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="注册"
-            bootstrap:bb_type="warning"
-            bootstrapbutton:bb_roundedCorners="true"
-            />
+            android:text="注册" />
     </TableRow>
 </RelativeLayout>
