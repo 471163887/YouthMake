@@ -72,8 +72,6 @@ public class RegisterActivity extends ActionBarActivity {
                 gender = "F";
             else
                 gender = "";
-
-
         }
     };
     /**

@@ -7,4 +7,8 @@
          https://developer.android.com/design/patterns/navigation-drawer.html -->
     <dimen name="navigation_drawer_width">240dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <!--BootStrapButton 样式 -->
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="micro_padding">4dp</dimen>
+    <dimen name="default_circle_size">250dp</dimen>
 </resources>

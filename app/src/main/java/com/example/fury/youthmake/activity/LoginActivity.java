@@ -308,7 +308,4 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
             }
         }
     };
-
-
-
 }
