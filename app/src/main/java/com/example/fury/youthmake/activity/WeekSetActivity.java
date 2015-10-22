@@ -12,11 +12,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.beardedhen.androidbootstrap.BootstrapButton;
+import com.beardedhen.androidbootstrap.BootstrapEditText;
 import com.example.fury.youthmake.R;
 import com.example.fury.youthmake.widget.DatePicker;
 import com.example.fury.youthmake.widget.TimePicker;
 
 import java.util.Calendar;
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class WeekSetActivity extends Activity {
 
@@ -37,11 +41,12 @@ public class WeekSetActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_week_set);
+        ButterKnife.bind(this);
 
         Rl_all = (RelativeLayout) findViewById(R.id.Rl_all);
-        //btn_naozhong = (Button) findViewById(R.id.btn_naozhong);
+        btn_naozhong = (Button) findViewById(R.id.btn_naozhong);
         calendar = Calendar.getInstance();
-        /*
+
         btn_naozhong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
@@ -66,9 +71,7 @@ public class WeekSetActivity extends Activity {
 //				//设置这2个使得点击pop以外区域可以去除pop
 //				pw.setOutsideTouchable(true);
 //				pw.setBackgroundDrawable(new BitmapDrawable());
-
                 //出现在布局中间
-
                 pw.showAtLocation(Rl_all, Gravity.CENTER, 0, -200 );
 
                 //点击确定
@@ -99,7 +102,7 @@ public class WeekSetActivity extends Activity {
                     }
                 });
             }
-        });*/
+        });
     }
 
     //listeners
@@ -118,4 +121,18 @@ public class WeekSetActivity extends Activity {
             selectMinute = minute;
         }
     };
+    @Bind(R.id.text_task_number) BootstrapEditText TaskNumber;
+    @OnClick(R.id.bnt_tasknum_sure) void onChangeRoundExampleClicked() {
+        TaskNumber.setRounded(!TaskNumber.isRounded());
+        Toast.makeText(this,"Fury",Toast.LENGTH_LONG).show();
+        String InTaskNum = TaskNumber.getText().toString();
+
+        int i = Integer.parseInt(InTaskNum);
+
+        if(i > 0 && i < 10) {
+            Toast.makeText(this, InTaskNum, Toast.LENGTH_LONG).show();
+        } else if (i > 10 ){
+            Toast.makeText(this, "大哥您一周要做那么多事情呐~", Toast.LENGTH_LONG).show();
+        }
+    }
 }

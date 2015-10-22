@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\WorkPlace\eclipse\StudioProject\YouthMake\app\libs\nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="D:\WorkPlace\eclipse\StudioProject\YouthMake\app\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-1efd402983a7772ab2feb3147ba9f3f40f544484.jar" />
+    </item>
+    <item
+        jar="D:\WorkPlace\eclipse\StudioProject\YouthMake\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="D:\WorkPlace\eclipse\StudioProject\YouthMake\app\build\intermediates\pre-dexed\debug\classes-56129ef31f671e5f28ccaa58bccada74624a474a.jar" />
+    </item>
+    <item
+        jar="C:\Users\flt\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="D:\WorkPlace\eclipse\StudioProject\YouthMake\app\build\intermediates\pre-dexed\debug\butterknife-7.0.1-bf7353a64ad3a7d3cf0da44741c6efa0c40f80bb.jar" />
+    </item>
+    <item
+        jar="D:\WorkPlace\eclipse\StudioProject\YouthMake\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="D:\WorkPlace\eclipse\StudioProject\YouthMake\app\build\intermediates\pre-dexed\debug\classes-c3c412d5f60992511ce60893297cd1f8dacfb8ab.jar" />
+    </item>
+    <item
+        jar="D:\WorkPlace\Android\SDK\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="D:\WorkPlace\eclipse\StudioProject\YouthMake\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-67b846b63658836b50f1ce0d4cc6900956d14f4b.jar" />
+    </item>
+    <item
+        jar="D:\WorkPlace\eclipse\StudioProject\YouthMake\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="D:\WorkPlace\eclipse\StudioProject\YouthMake\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-fc29f6c62564c52859204cef200fd82a21a06767.jar" />
+    </item>
+    <item
+        jar="D:\WorkPlace\eclipse\StudioProject\YouthMake\app\build\intermediates\exploded-aar\com.beardedhen\androidbootstrap\2.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="97a86524e0785eaf68e99d38de168a8bafd61d62">
+        <dex dex="D:\WorkPlace\eclipse\StudioProject\YouthMake\app\build\intermediates\pre-dexed\debug\classes-235a0e2856e6a0793d14a3a94152990fa4eb2068.jar" />
+    </item>
+    <item
+        jar="D:\WorkPlace\eclipse\StudioProject\YouthMake\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="D:\WorkPlace\eclipse\StudioProject\YouthMake\app\build\intermediates\pre-dexed\debug\classes-cc06e527fea7b529dc851e9a298ed6e3bd84f0eb.jar" />
+    </item>
+
+</items>

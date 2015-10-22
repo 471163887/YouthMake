@@ -109,8 +109,7 @@
                 style="@style/home_button"
                 app:bootstrapBrand="primary"
                 app:roundedCorners="true"
-                android:text="注册"
-                 />
+                android:text="注册" />
         </TableRow>
     </LinearLayout>
 </RelativeLayout>
