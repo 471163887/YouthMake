@@ -41,17 +41,17 @@ public class DatePicker extends LinearLayout {
 		int day = calendar.get(Calendar.DAY_OF_MONTH);
 		int week = calendar.get(Calendar.DAY_OF_WEEK);
 		dateList = new ArrayList<DateObject>();
-		for (int i = 0; i < 7; i++) {
+		for (int i = 0; i < 8; i++) {
 			dateObject = new DateObject(year, month, day+i, week+i);
 			dateList.add(dateObject);
 		}
 		
 		newDays = new WheelView(context);
-		LayoutParams newDays_param = new LayoutParams(300,LayoutParams.WRAP_CONTENT);
+		LayoutParams newDays_param = new LayoutParams(500,LayoutParams.WRAP_CONTENT);
 		newDays_param.setMargins(0, 0, MARGIN_RIGHT, 0);
 		newDays.setLayoutParams(newDays_param);
 		newDays.setAdapter(new StringWheelAdapter(dateList, 7));
-		newDays.setVisibleItems(3);
+		newDays.setVisibleItems(5);
 		newDays.setCyclic(true);
 		newDays.addChangingListener(onDaysChangedListener);		
 		addView(newDays);
