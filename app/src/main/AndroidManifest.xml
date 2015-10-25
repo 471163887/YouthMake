@@ -47,6 +47,8 @@
         </activity>
         <activity android:name=".activity.WeekSetActivity" >
         </activity>
+        <activity android:name=".activity.TaskListActivity" >
+        </activity>
     </application>
 
 </manifest>

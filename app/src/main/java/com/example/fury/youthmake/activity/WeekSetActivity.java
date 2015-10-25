@@ -1,6 +1,7 @@
 package com.example.fury.youthmake.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -140,5 +141,8 @@ public class WeekSetActivity extends Activity {
 
         weekTask = new WeekTask();
         weekTask.print();
+
+        Intent intent = new Intent(WeekSetActivity.this, TaskListActivity.class);
+        WeekSetActivity.this.startActivity(intent);
     }
 }
