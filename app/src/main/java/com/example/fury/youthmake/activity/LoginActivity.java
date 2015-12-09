@@ -242,8 +242,6 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
                     m.what = StringUtil.LOGIN_ERROR_PASSWORD;
                 } else
                     m.what = StringUtil.LOGIN_SUCCESS;
-
-
                 handler.sendMessage(m);
             }
 

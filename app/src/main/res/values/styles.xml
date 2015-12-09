@@ -23,14 +23,17 @@
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
-       <!--  背景进入阴影 -->
-         <item name="android:backgroundDimEnabled">true</item>
+        <!--  背景进入阴影 -->
+        <item name="android:backgroundDimEnabled">true</item>
     </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
     <!--BootStrapButton 样式 -->
     <style name="home_button">
@@ -43,6 +46,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginRight">@dimen/micro_padding</item>
     </style>
+
     <style name="wrapping_fa_text">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

@@ -23,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fury.youthmake.R;
+import com.example.fury.youthmake.fragment.Memo;
 import com.example.fury.youthmake.fragment.Message;
 import com.example.fury.youthmake.fragment.NavigationDrawerFragment;
 import com.example.fury.youthmake.fragment.Setting;
@@ -51,6 +52,13 @@ public class MainActivity extends ActionBarActivity
     private View messageLayout;
     private ImageView messageImage;
     private TextView messageText;
+    /**
+     * memoLayout
+     */
+    private Memo memoFragment;
+    private View memoLayout;
+    private ImageView memoImage;
+    private TextView memoText;
     /**
      * settingLayout
      */
@@ -247,6 +255,11 @@ public class MainActivity extends ActionBarActivity
         messageText = (TextView) findViewById(R.id.message_text);
         messageLayout.setOnClickListener(MainActivity.this);
 
+        memoLayout = findViewById(R.id.memo_layout);
+        memoImage = (ImageView) findViewById(R.id.contacts_image);
+        memoText = (TextView) findViewById(R.id.contacts_text);
+        memoLayout.setOnClickListener(MainActivity.this);
+
         settingLayout = findViewById(R.id.setting_layout);
         settingImage = (ImageView) findViewById(R.id.setting_image);
         settingText = (TextView) findViewById(R.id.setting_text);
@@ -263,6 +276,10 @@ public class MainActivity extends ActionBarActivity
             case R.id.message_layout:
                 // 当点击了消息tab时，选中第1个tab
                 setTabSelection(0);
+                break;
+            case R.id.memo_layout:
+                // 当点击了消息tab时，选中第1个tab
+                setTabSelection(1);
                 break;
             case R.id.news_layout:
                 // 当点击了动态tab时，选中第3个tab
@@ -305,6 +322,22 @@ public class MainActivity extends ActionBarActivity
                     transaction.show(messageFragment);
                 }
                 break;
+            case 1:
+                memoImage.setImageResource(R.drawable.contacts_selected);
+                memoText.setTextColor(Color.RED);
+                if (memoFragment == null) {
+                    // 如果MessageFragment为空，则创建一个并添加到界面上
+                    memoFragment = new Memo(MainActivity.this);
+                    //transaction.replace(R.id.container, messageFragment);
+                    transaction.add(R.id.container, memoFragment);
+                } else {
+                    //transaction.replace(R.id.container, messageFragment);
+                    //如果MessageFragment不为空，则直接将它显示出来
+                    transaction.show(memoFragment);
+                }
+                Intent toNote4 = new Intent(MainActivity.this, Note4Activity.class);
+                startActivity(toNote4);
+                break;
             case 2:
                 //  当点击了设置tab时，改变控件的图片和文字颜色
                 weeklyImage.setImageResource(R.drawable.news_selected);
@@ -342,6 +375,8 @@ public class MainActivity extends ActionBarActivity
     private void clearSelection() {
         messageImage.setImageResource(R.drawable.message_unselected);
         messageText.setTextColor(Color.parseColor("#82858b"));
+        memoImage.setImageResource(R.drawable.contacts_unselected);
+        memoText.setTextColor(Color.parseColor("#82858b"));
         settingImage.setImageResource(R.drawable.setting_unselected);
         settingText.setTextColor(Color.parseColor("#82858b"));
         weeklyImage.setImageResource(R.drawable.news_unselected);
@@ -357,6 +392,9 @@ public class MainActivity extends ActionBarActivity
     private void hideFragments(FragmentTransaction transaction) {
         if (messageFragment != null) {
             transaction.hide(messageFragment);
+        }
+        if (memoFragment != null) {
+            transaction.hide(memoFragment);
         }
         if (settingFragment != null) {
             transaction.hide(settingFragment);
