@@ -63,8 +63,8 @@ public class JazzyViewPager extends ViewPager {
 	@SuppressWarnings("incomplete-switch")
 	public JazzyViewPager(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		setClipChildren(false);
 		// now style everything!
+		setClipChildren(false);
 		TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.JazzyViewPager);
 		int effect = ta.getInt(R.styleable.JazzyViewPager_style, 0);
 		String[] transitions = getResources().getStringArray(R.array.jazzy_effects);

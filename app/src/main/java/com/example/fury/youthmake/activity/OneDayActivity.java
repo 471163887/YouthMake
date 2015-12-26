@@ -53,16 +53,26 @@ public class OneDayActivity extends AppCompatActivity {
             mJazzy.setObjectForPosition(imageView, position);
             return imageView;
             */
+            //改成EditText 用于可以编辑的文字
             TextView text = new TextView(OneDayActivity.this);
             text.setGravity(Gravity.CENTER);
             text.setTextSize(30);
             text.setTextColor(Color.WHITE);
-            text.setText("Page " + position);
+            switch (position){
+                case 0:text.setText("早晨计划 " + position);break;
+                case 1:text.setText("下午计划 " + position);break;
+                case 2:text.setText("晚上计划 " + position);break;
+                default:break;
+            }
+
             text.setPadding(30, 30, 30, 30);
             int bg = Color.rgb((int) Math.floor(Math.random()*128)+64,
                     (int) Math.floor(Math.random()*128)+64,
                     (int) Math.floor(Math.random()*128)+64);
             text.setBackgroundColor(bg);
+            //
+            text.setClickable(true);
+
             container.addView(text, LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
             mJazzy.setObjectForPosition(text, position);
             return text;

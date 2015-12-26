@@ -1,6 +1,7 @@
 package com.example.fury.youthmake.widget;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,7 @@ import java.util.List;
 public class NoteAdapter extends BaseAdapter {
     private Context noteContext;
     private List<Note> noteList;
+    private int bg;
 
     public NoteAdapter(Context noteContext, List<Note> noteList) {
         this.noteContext = noteContext;
@@ -44,19 +46,33 @@ public class NoteAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view= LayoutInflater.from(noteContext).inflate(R.layout.view_note,parent,false);
+        View view= LayoutInflater.from(noteContext).inflate(R.layout.view_note, parent, false);
+
         switch(position%4){
             case 1:
-                view.setBackgroundResource(R.color.red);
+                //view.setBackgroundResource(R.color.red);
+                bg = Color.rgb((int) Math.floor(Math.random() * 128) + 64,
+                        (int) Math.floor(Math.random() * 128) + 64,
+                        (int) Math.floor(Math.random() * 128) + 64);
+                view.setBackgroundColor(bg);
                 break;
             case 2:
-                view.setBackgroundResource(R.color.green);
+                bg = Color.rgb((int) Math.floor(Math.random() * 128) + 64,
+                        (int) Math.floor(Math.random() * 128) + 64,
+                        (int) Math.floor(Math.random() * 128) + 64);
+                view.setBackgroundColor(bg);
                 break;
             case 3:
-                view.setBackgroundResource(R.color.yellow_tan);
+                bg = Color.rgb((int) Math.floor(Math.random() * 128) + 64,
+                        (int) Math.floor(Math.random() * 128) + 64,
+                        (int) Math.floor(Math.random() * 128) + 64);
+                view.setBackgroundColor(bg);
                 break;
             case 0:
-                view.setBackgroundResource(R.color.blue);
+                bg = Color.rgb((int) Math.floor(Math.random() * 128) + 64,
+                        (int) Math.floor(Math.random() * 128) + 64,
+                        (int) Math.floor(Math.random() * 128) + 64);
+                view.setBackgroundColor(bg);
                 break;
             default:
                 break;
