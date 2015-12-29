@@ -6,6 +6,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.audiofx.BassBoost;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.Message;
 import android.preference.PreferenceActivity;
@@ -236,15 +238,19 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
                 Message m = new Message();
                 System.out.println("+++++++++++++++");
                 System.out.println("---------------");
-                if("-1".equals(res)) {
-                    m.what = StringUtil.LOGIN_ERROR;
-                } else if("-2".equals(res)){
-                    m.what = StringUtil.LOGIN_ERROR_PASSWORD;
-                } else
-                    m.what = StringUtil.LOGIN_SUCCESS;
+
+                if(isConn(LoginActivity.this)){
+                        if("-1".equals(res)) {
+                            m.what = StringUtil.LOGIN_ERROR;
+                        } else if("-2".equals(res)){
+                            m.what = StringUtil.LOGIN_ERROR_PASSWORD;
+                        } else
+                            m.what = StringUtil.LOGIN_SUCCESS;
+                } else{
+                    m.what = StringUtil.NET_CON;
+                }
                 handler.sendMessage(m);
             }
-
         }.start();
     }
     /***开一个线程开始登录，并用对话框提示是否登录成功***/
@@ -256,6 +262,15 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 
             prgDialog.dismiss();
             switch(msg.what){
+                case StringUtil.NET_CON:
+                    builder.setIcon(R.drawable.simle)
+                            .setTitle(getString(R.string.warning))
+                            .setMessage("请连接网络噢！")
+                            .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                }
+                            }).show();
+                    break;
                 case StringUtil.LOGIN_ERROR:
                     builder.setIcon(R.drawable.simle)
                             .setTitle(getString(R.string.warning))
@@ -306,4 +321,21 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
             }
         }
     };
+
+    /*
+     * 判断网络连接是否已开
+     * 2012-08-20
+     *true 已打开  false 未打开
+     * */
+    public static boolean isConn(Context context){
+        boolean bisConnFlag=false;
+        ConnectivityManager conManager = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo network = conManager.getActiveNetworkInfo();
+        if(network!=null){
+            bisConnFlag=conManager.getActiveNetworkInfo().isAvailable();
+        }
+        return bisConnFlag;
+    }
 }
+
+

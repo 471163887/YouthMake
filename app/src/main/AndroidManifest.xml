@@ -3,6 +3,8 @@
     package="com.example.fury.youthmake">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!--判断网络是否存在 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:name=".activity.SampleApplication"

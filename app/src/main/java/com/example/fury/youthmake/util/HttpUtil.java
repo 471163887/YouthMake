@@ -14,6 +14,7 @@ import org.apache.http.util.EntityUtils;
  */
 public class HttpUtil {
 
+    //public static final String BASE_URL="http://49.140.75.67:8080/youth_make/";
     public static final String BASE_URL="http://49.140.75.67:8080/youth_make/";
 
     public static HttpGet getHttpGet(String url){

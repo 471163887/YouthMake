@@ -34,6 +34,7 @@ public class StringUtil {
     public static final int LOGIN_ERROR = 0; // 登陆错误
     public static final int LOGIN_SUCCESS = 1; // 登陆成功
     public static final int LOGIN_ERROR_PASSWORD = 2; //登陆密码错误
+    public static final int NET_CON = 3; //网络未连接
 
     /**
      * 等待Dialog
